@@ -1,0 +1,9 @@
+language: php
+php:
+  - 7.1.9
+services:
+  - doxker
+before_install
+  - composer update
+script:
+  - docker run -v ${PWD}:/app --rm phpunit/phpunit /app
